@@ -11,7 +11,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/users")
+    fetch("http://3.110.85.63:5000/users")
       .then(res => res.json())
       .then(data => {
         setUsers(data);
@@ -41,8 +41,8 @@ export default function Home() {
           ))
         ) : users.length > 0 ? (
           users.map((user, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="glass rounded-2xl p-6 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
             >
